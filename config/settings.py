@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'common.apps.CommonConfig',
+    'binance_lab_portfolio.apps.BinanceLabPortfolioConfig',
 ]
 
 MIDDLEWARE = [
