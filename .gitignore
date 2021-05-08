@@ -1,0 +1,23 @@
+# os stuff
+.idea/
+
+# virtualenv
+venv/
+
+# python
+*.pyc
+__pycache__/
+
+# editor
+.vscode
+
+# log
+logs/
+*.log
+
+# database
+*.db
+db.sqlite3
+
+# env
+.env
