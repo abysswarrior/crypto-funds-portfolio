@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'common.apps.CommonConfig',
     'binance_lab_portfolio.apps.BinanceLabPortfolioConfig',
+    'panel.apps.PanelConfig',
 ]
 
 MIDDLEWARE = [
