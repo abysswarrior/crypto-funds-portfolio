@@ -3,3 +3,7 @@
 You can access all data through UI or APIs.
 
 > The main content of this app crawled from [messari.io](https://messari.io/)
+
+# deployment
+
+You can see deployed version of project in [here](https://crypto-funds-portfolio.herokuapp.com/)
