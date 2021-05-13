@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+
     'common.apps.CommonConfig',
     'binance_lab_portfolio.apps.BinanceLabPortfolioConfig',
     'panel.apps.PanelConfig',
