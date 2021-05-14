@@ -1,4 +1,6 @@
 from decouple import config
+from dotenv import  load_dotenv, find_dotenv
+load_dotenv(find_dotenv())
 
 ON_HEROKU = config('ON_HEROKU', cast=bool)
 CHROMEDRIVER_PATH = config('CHROMEDRIVER_PATH')
