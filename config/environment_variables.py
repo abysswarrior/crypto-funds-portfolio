@@ -1,5 +1,5 @@
 from decouple import config
-from dotenv import  load_dotenv, find_dotenv
+from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 
 ON_HEROKU = config('ON_HEROKU', cast=bool)
