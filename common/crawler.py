@@ -19,13 +19,10 @@ def crawl(url):
 
     """
     chrome_options = Options()
-
-    print("##################### ", str(ON_HEROKU))
-    print("##################### ", str(GOOGLE_CHROME_BIN))
-
+    
     # add binary location only when running on heroku
     if ON_HEROKU:
-        chrome_options.binary_location(GOOGLE_CHROME_BIN)
+        chrome_options.binary_location = GOOGLE_CHROME_BIN
 
     # some option to work headless
     chrome_options.add_argument("--no-sandbox")
