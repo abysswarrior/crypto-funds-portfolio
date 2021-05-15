@@ -6,7 +6,7 @@ You can access all data through UI or APIs.
 
 # Live Demo
 
-You can see the deployed version of project in _heroku_ [here](https://crypto-funds-portfolio.herokuapp.com/)
+You can see the deployed version of project [here](https://crypto-funds-portfolio.herokuapp.com/)
 
 # Swagger API Document
 
