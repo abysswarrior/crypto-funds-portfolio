@@ -4,9 +4,9 @@ You can access all data through UI or APIs.
 
 > The main content of this app crawled from [messari.io](https://messari.io/)
 
-# deployment
+# Live Demo
 
-You can see deployed version of project in [here](https://crypto-funds-portfolio.herokuapp.com/)
+You can see the deployed version of project in _heroku_ [here](https://crypto-funds-portfolio.herokuapp.com/)
 
 # Swagger API Document
 
