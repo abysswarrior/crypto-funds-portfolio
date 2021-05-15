@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
 
+    'doc.apps.DocConfig',
     'common.apps.CommonConfig',
     'binance_lab_portfolio.apps.BinanceLabPortfolioConfig',
     'panel.apps.PanelConfig',

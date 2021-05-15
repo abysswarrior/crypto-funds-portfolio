@@ -1,0 +1,79 @@
+openapi: 3.0.0
+servers:
+  - url: 'https://crypto-funds-portfolio.herokuapp.com/api/v1'
+    variables: {}
+info:
+  description: |-
+    **Crypto Funds Portfolio** is a **free** and **open-source** project that gives you the portfolio of
+    the most famous cryptocurrency hedge funds and venture capitals. You can access
+    all data with ours APIs.
+  version: 1.0.0
+  title: Crypto Funds Portfolio
+  termsOfService: ''
+  contact:
+    email: mehran.safaripour@gmail.com
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: Funds Portfolio
+    description: API related to portfolio's assets
+paths:
+  /binance-lab/assets/:
+    post:
+      summary: Binance Labs Portfolio
+      description: list of all coin listed in binance lab
+      operationId: binance_lab_portfolio
+      responses:
+        '200':
+          description: success
+          content:
+            '*/*':
+              example: |-
+                {
+                    "last_24h_total_price_change_str": "-2.11%",
+                    "last_24h_total_price_change_int": -2.11,
+                    "last_7d_total_price_change_str": "-11.31%",
+                    "last_7d_total_price_change_int": -11.31,
+                    "last_30d_total_price_change_str": "+4.16%",
+                    "last_30d_total_price_change_int": 4.16,
+                    "last_90d_total_price_change_str": "+49.48%",
+                    "last_90d_total_price_change_int": 49.48,
+                    "last_1Y_total_price_change_str": "+964.02%",
+                    "last_1Y_total_price_change_int": 964.02,
+                    "last_YTD_total_price_change_str": "+259.01%",
+                    "last_YTD_total_price_change_int": 259.01,
+                    "total_asset_count": 17,
+                    "assets": [
+                        {
+                            "id": "1",
+                            "asset_full_name": "Bitcoin",
+                            "asset_symbol": "BTC",
+                            "price_str": "$48,674.72",
+                            "price_int": 48674.72,
+                            "reported_marketcap_str": "$917B",
+                            "reported_marketcap_int": 917000000000.0,
+                            "last_24h_volume_str": "$9.75B",
+                            "last_24h_volume_int": 9750000000.0,
+                            "last_24h_price_change_str": "-3.39%",
+                            "last_24h_price_change_int": -3.39,
+                            "last_7d_price_change_str": "-17.71%",
+                            "last_7d_price_change_int": -17.71,
+                            "last_30d_price_change_str": "-23.29%",
+                            "last_30d_price_change_int": -23.29,
+                            "last_90d_price_change_str": "-0.28%",
+                            "last_90d_price_change_int": -0.28,
+                            "last_1Y_price_change_str": "+420.95%",
+                            "last_1Y_price_change_int": 420.95,
+                            "last_YTD_price_change_str": "+64.99%",
+                            "last_YTD_price_change_int": 64.99,
+                            "sector": "Currencies",
+                            "liquid_supply_str": "18.71M",
+                            "liquid_supply_int": 18710000.0
+                        }
+                    ]
+                }
+      tags:
+        - Funds Portfolio
+      security: []
+security: []

@@ -1,0 +1,157 @@
+@import url(fontiran.css); /* لینک فایلی که وظیفه بارگذاری فونت ها را برعهده دارد */
+body  {
+    font-family: IRANSans, serif !important;
+    font-weight: 300;
+    /*direction: rtl;*/
+    /*background-color: #E2E2E2;*/
+    margin: 0;
+}
+body * {
+  font-family: IRANSans, serif !important;
+}
+input {
+    font-family: IRANSans, serif !important;
+}
+
+h1, h2, h3, h4, h5, h6, input, textarea {
+    font-family: IRANSans,serif !important;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+h1 {
+    display: inherit;
+    font-size: 2em !important;
+    -webkit-margin-before: 0.67em !important;
+    -webkit-margin-after: 0.67em !important;
+    -webkit-margin-start: 0 !important;
+    -webkit-margin-end: 0 !important;
+    font-weight: bold;
+}
+
+h2 {
+    display: inherit;
+    font-size: 1.5em !important;
+    -webkit-margin-before: 0.83em !important;
+    -webkit-margin-after: 0.83em !important;
+    -webkit-margin-start: 0 !important;
+    -webkit-margin-end: 0 !important;
+    font-weight: bold;
+}
+
+h3 {
+    display: inherit;
+    font-size: 1.17em !important;
+    -webkit-margin-before: 1em !important;
+    -webkit-margin-after: 1em !important;
+    -webkit-margin-start: 0 !important;
+    -webkit-margin-end: 0 !important;
+    font-weight: bold;
+}
+
+h4 {
+    display: inherit;
+    font-size: 1em !important;
+    -webkit-margin-before: 1.33em !important;
+    -webkit-margin-after: 1.33em !important;
+    -webkit-margin-start: 0 !important;
+    -webkit-margin-end: 0 !important;
+    font-weight: bold;
+}
+
+h5 {
+    display: inherit;
+    font-size: 0.83em !important;
+    -webkit-margin-before: 1.67em !important;
+    -webkit-margin-after: 1.67em !important;
+    -webkit-margin-start: 0 !important;
+    -webkit-margin-end: 0 !important;
+    font-weight: bold;
+}
+
+h6 {
+    display: inherit;
+    font-size: 0.67em !important;
+    -webkit-margin-before: 2.33em !important;
+    -webkit-margin-after: 2.33em !important;
+    -webkit-margin-start: 0 !important;
+    -webkit-margin-end: 0 !important;
+    font-weight: bold;
+}
+
+p {
+    display: inherit;
+    font-size: 1em !important;
+    -webkit-margin-before: 1em !important;
+    -webkit-margin-after: 1em !important;
+    -webkit-margin-start: 0 !important;
+    -webkit-margin-end: 0 !important;
+}
+
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.ltr {
+    direction: ltr;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-small {
+    font-size: 0.8em;
+}
+
+.text-xsmall {
+    font-size: 0.6em;
+}
+
+.text-large {
+    font-size: 1.2em;
+}
+
+.text-xlarge {
+    font-size: 1.4em;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.text-ultralight {
+    font-weight: 200;
+}
+
+.text-light {
+    font-weight: 300;
+}
+
+.text-regular {
+    font-weight: normal;
+}
+
+.text-medium {
+    font-weight: 500;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-black {
+    font-weight: 900;
+}
+
