@@ -19,6 +19,7 @@ from panel.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('docs/', include('doc.urls')),
     path('', include('panel.urls')),
     path('api/v1/binance-lab/', include('binance_lab_portfolio.urls')),
 ]
