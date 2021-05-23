@@ -1,4 +1,5 @@
 {% extends 'panel/base.html' %}
+{% load mathfilters %}
 
 {% block content %}
     <!-- Header -->
@@ -27,12 +28,14 @@
                                 <div class="row">
                                     <div class="col">
                                         <h5 class="card-title text-uppercase text-muted mb-0">Last 24h</h5>
-                                        {% if -0.99 < 0 %}
+                                        {% if portfolio.last_24h_total_price_change_int == 0 %}
+                                            <span class="h2 font-weight-bold mb-0"> -- </span>
+                                        {% elif portfolio.last_24h_total_price_change_int < 0 %}
                                             <span class="h2 font-weight-bold mb-0 text-red"><i
-                                                    class="fa fa-arrow-down"></i> 0.99 %</span>
+                                                    class="fa fa-arrow-down"></i> {{ portfolio.last_24h_total_price_change_int|abs }} %</span>
                                         {% else %}
                                             <span class="h2 font-weight-bold mb-0 text-green"><i
-                                                    class="fa fa-arrow-up"></i> 0.99 %</span>
+                                                    class="fa fa-arrow-up"></i> {{portfolio.last_24h_total_price_change_int}} %</span>
                                         {% endif %}
                                     </div>
                                     <div class="col-auto">
@@ -54,12 +57,14 @@
                                 <div class="row">
                                     <div class="col">
                                         <h5 class="card-title text-uppercase text-muted mb-0">Last 7d</h5>
-                                        {% if -26.32 < 0 %}
+                                        {% if portfolio.last_7d_total_price_change_int == 0 %}
+                                            <span class="h2 font-weight-bold mb-0"> -- </span>
+                                        {% elif portfolio.last_7d_total_price_change_int < 0 %}
                                             <span class="h2 font-weight-bold mb-0 text-red"><i
-                                                    class="fa fa-arrow-down"></i> 26.32 %</span>
+                                                    class="fa fa-arrow-down"></i> {{ portfolio.last_7d_total_price_change_int|abs }} %</span>
                                         {% else %}
                                             <span class="h2 font-weight-bold mb-0 text-green"><i
-                                                    class="fa fa-arrow-up"></i> 26.32 %</span>
+                                                    class="fa fa-arrow-up"></i> {{ portfolio.last_7d_total_price_change_int }} %</span>
                                         {% endif %}
                                     </div>
                                     <div class="col-auto">
@@ -81,12 +86,14 @@
                                 <div class="row">
                                     <div class="col">
                                         <h5 class="card-title text-uppercase text-muted mb-0">Last 30d</h5>
-                                        {% if -21.76 < 0 %}
+                                        {% if portfolio.last_30d_total_price_change_int == 0 %}
+                                            <span class="h2 font-weight-bold mb-0"> -- </span>
+                                        {% elif portfolio.last_30d_total_price_change_int < 0 %}
                                             <span class="h2 font-weight-bold mb-0 text-red"><i
-                                                    class="fa fa-arrow-down"></i> 21.76 %</span>
+                                                    class="fa fa-arrow-down"></i> {{ portfolio.last_30d_total_price_change_int|abs }} %</span>
                                         {% else %}
                                             <span class="h2 font-weight-bold mb-0 text-green"><i
-                                                    class="fa fa-arrow-up"></i> 21.76 %</span>
+                                                    class="fa fa-arrow-up"></i> {{ portfolio.last_30d_total_price_change_int }} %</span>
                                         {% endif %}
                                     </div>
                                     <div class="col-auto">
@@ -108,12 +115,14 @@
                                 <div class="row">
                                     <div class="col">
                                         <h5 class="card-title text-uppercase text-muted mb-0">Last 1Y</h5>
-                                        {% if 510.64 < 0 %}
+                                        {% if portfolio.last_1Y_total_price_change_int == 0 %}
+                                            <span class="h2 font-weight-bold mb-0"> -- </span>
+                                        {% elif portfolio.last_1Y_total_price_change_int < 0 %}
                                             <span class="h2 font-weight-bold mb-0 text-red"><i
-                                                    class="fa fa-arrow-down"></i> 510.64 %</span>
+                                                    class="fa fa-arrow-down"></i> {{ portfolio.last_1Y_total_price_change_int|abs }} %</span>
                                         {% else %}
                                             <span class="h2 font-weight-bold mb-0 text-green"><i
-                                                    class="fa fa-arrow-up"></i> 510.64 %</span>
+                                                    class="fa fa-arrow-up"></i> {{ portfolio.last_1Y_total_price_change_int }} %</span>
                                         {% endif %}
                                     </div>
                                     <div class="col-auto">
