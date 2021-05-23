@@ -171,47 +171,66 @@
                             </tr>
                             </thead>
                             <tbody class="list">
-                            <tr>
+                            {% for p in portfolio.assets %}
+                                <tr>
                                 <th scope="row" class="text-sm">
-                                    Bitcoin
+                                    {{ p.asset_full_name }}
                                 </th>
-                                <td class="text-sm">BTC</td>
-                                <td class="text-sm">$36,349.72</td>
-                                <td class="text-sm">$686B</td>
-                                <td class="text-sm">$10.61B</td>
-                                {% if 0.15 > 0 %}
-                                    <td class="text-green text-sm">+0.15%</td>
+                                <td class="text-sm"> {{ p.asset_symbol }} </td>
+                                <td class="text-sm"> {{ p.price_str }} </td>
+                                <td class="text-sm"> {{ p.reported_marketcap_str }} </td>
+                                <td class="text-sm"> {{ p.last_24h_volume_str }} </td>
+                                {% if p.last_24h_price_change_int == 0 %}
+                                    <td class="text-sm"> -- </td>
+                                {% elif p.last_24h_price_change_int > 0 %}
+                                    <td class="text-green text-sm"> {{ p.last_24h_price_change_str }} </td>
                                 {% else %}
-                                    <td class="text-red text-sm">+0.15%</td>
+                                    <td class="text-red text-sm"> {{ p.last_24h_price_change_str }} </td>
                                 {% endif %}
-                                {% if -21.49 > 0 %}
-                                    <td class="text-green text-sm">-21.49%</td>
+
+                                {% if p.last_7d_price_change_int == 0 %}
+                                    <td class="text-sm"> -- </td>
+                                {% elif p.last_7d_price_change_int > 0 %}
+                                    <td class="text-green text-sm"> {{ p.last_7d_price_change_str }} </td>
                                 {% else %}
-                                    <td class="text-red text-sm">-21.49%</td>
+                                    <td class="text-red text-sm"> {{ p.last_7d_price_change_str }} </td>
                                 {% endif %}
-                                {% if -28.67 > 0 %}
-                                    <td class="text-green text-sm">-28.67%</td>
+
+                                {% if p.last_30d_price_change_int == 0 %}
+                                    <td class="text-sm"> -- </td>
+                                {% elif p.last_30d_price_change_int > 0 %}
+                                    <td class="text-green text-sm"> {{ p.last_30d_price_change_str }} </td>
                                 {% else %}
-                                    <td class="text-red text-sm">-28.67%</td>
+                                    <td class="text-red text-sm"> {{ p.last_30d_price_change_str }} </td>
                                 {% endif %}
-                                {% if -32.58 > 0 %}
-                                    <td class="text-green text-sm">-32.58%</td>
+
+                                {% if p.last_90d_price_change_int == 0 %}
+                                    <td class="text-sm"> -- </td>
+                                {% elif p.last_90d_price_change_int > 0 %}
+                                    <td class="text-green text-sm"> {{ p.last_90d_price_change_str }} </td>
                                 {% else %}
-                                    <td class="text-red text-sm">-32.58%</td>
+                                    <td class="text-red text-sm"> {{ p.last_90d_price_change_str }} </td>
                                 {% endif %}
-                                {% if 297.6 > 0 %}
-                                    <td class="text-green text-sm">+297.60%</td>
+
+                                {% if p.last_1Y_price_change_int == 0 %}
+                                    <td class="text-sm"> -- </td>
+                                {% elif p.last_1Y_price_change_int > 0 %}
+                                    <td class="text-green text-sm"> {{ p.last_1Y_price_change_str }} </td>
                                 {% else %}
-                                    <td class="text-red text-sm">+297.60%</td>
+                                    <td class="text-red text-sm"> {{ p.last_1Y_price_change_str }} </td>
                                 {% endif %}
-                                {% if 24.16 > 0 %}
-                                    <td class="text-green text-sm">+24.16%</td>
+
+                                {% if p.last_YTD_price_change_int == 0 %}
+                                    <td class="text-sm"> -- </td>
+                                {% elif p.last_YTD_price_change_int > 0 %}
+                                    <td class="text-green text-sm"> {{ p.last_YTD_price_change_str }} </td>
                                 {% else %}
-                                    <td class="text-red text-sm">+24.16%</td>
+                                    <td class="text-red text-sm"> {{ p.last_YTD_price_change_str }} </td>
                                 {% endif %}
-                                <td class="text-sm">Currencies</td>
-                                <td class="text-sm">18.72M</td>
+                                <td class="text-sm"> {{ p.sector }} </td>
+                                <td class="text-sm"> {{ p.liquid_supply_str }} </td>
                             </tr>
+                            {% endfor %}
                             </tbody>
                         </table>
                     </div>
