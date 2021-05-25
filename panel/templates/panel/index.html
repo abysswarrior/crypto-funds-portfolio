@@ -1,26 +1,147 @@
 {% extends 'panel/base.html' %}
 {% load mathfilters %}
+{% load static %}
 
 {% block content %}
     <!-- Header -->
-    <div class="header bg-primary pb-6">
-        <div class="container-fluid">
-            <div class="header-body">
-                <div class="row align-items-center py-4">
-                    <div class="col-lg-6 col-7">
-                        <h6 class="h2 text-white d-inline-block mb-0">Home</h6>
-                        <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
-                            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                                <li class="breadcrumb-item"><a href="{% url 'panel:home' %}"><i class="fas fa-home"></i></a>
-                                </li>
-                                <li class="breadcrumb-item"><a href="{% url 'panel:home' %}">home</a></li>
-                            </ol>
-                        </nav>
-                    </div>
+    <div class="header pb-6 d-flex align-items-center"
+         style="min-height: 500px; background-image: url({% static 'panel/img/theme/home-bg.jpg' %}); background-size: cover; background-position: center top;">
+        <!-- Mask -->
+        <span class="mask bg-gradient-default opacity-8"></span>
+        <!-- Header container -->
+        <div class="container-fluid d-flex align-items-center">
+            <div class="row">
+                <div class="col-lg-9 col-md-10">
+                    <h1 class="display-2 text-white">Hello Crypto!</h1>
+                    <p class="text-white mt-0 mb-5 text-lg">
+                        <b>Crypto Funds Portfolio</b> is a free and open-source project,
+                        It's a web application that gives you the portfolio of the most famous cryptocurrency
+                        hedge funds and venture capitals. You can access all data through UI or APIs.
+                    </p>
+                    <a href="https://github.com/b1ng-b0ng/crypto-funds-portfolio" target="_blank"
+                       class="btn btn-neutral"><i class="fas fa-laptop"></i> Github</a>
+                    <a href="https://twitter.com/MehranSafaripur" target="_blank" class="btn btn-neutral"><i
+                            class="ni ni-send"></i> Contact</a>
+                    <a href="#!" class="btn btn-neutral"><i class="fas fa-credit-card"></i> Donate</a>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Page content -->
+    <div class="container-fluid mt--6">
 
-    <p>welcome to crypto funds portfolio</p>
+        <div class="row">
+            <div class="col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'panel/img/theme/binance.png' %}"
+                         alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Binance Labs</h4>
+                        <p class="card-text">Binance Labs is an infrastructure impact fund and an initiative
+                            launched by Binance. You can see the list of cryptoassets that Binance Labs has invested in.</p>
+                        <a href="{% url 'panel:binance' %}" class="btn btn-primary">check it out!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'panel/img/theme/pantera.jpeg' %}"
+                         alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Pantera Capital</h4>
+                        <p class="card-text">Pantera Capital is an investment firm focused exclusively on ventures,
+                            tokens, and projects related to blockchain tech.</p>
+                        <a href="#" class="btn btn-primary">coming soon ...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'panel/img/theme/coinbase.png' %}"
+                         alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Coinbase Ventures</h4>
+                        <p class="card-text">Coinbase Ventures is an investment arm of Coinbase
+                            that aims to invest in early-stage cryptocurrency and blockchain startups.</p>
+                        <a href="#" class="btn btn-primary">coming soon ...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'panel/img/theme/almeda.jpg' %}"
+                         alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Alameda Research</h4>
+                        <p class="card-text">Alameda Research is a quantitative trading firm bringing expertise from
+                            Wall Street and Silicon Valley to provide liquidity in crypto markets worldwide.</p>
+                        <a href="#" class="btn btn-primary">coming soon ...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'panel/img/theme/polychain.jpg' %}"
+                         alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Polychain Capital</h4>
+                        <p class="card-text">Polychain Capital manages a hedge fund which invests in a
+                            diversified portfolio of blockchain tokens. Here a list of crypotassets Polychain
+                            has invested in.</p>
+                        <a href="#" class="btn btn-primary">coming soon ...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'panel/img/theme/three-arrows.png' %}"
+                         alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Three Arrows Capital</h4>
+                        <p class="card-text">Three Arrows Capital is a hedge fund manager, focused on providing
+                            superior risk-adjusted returns. You can see the list of liquid tokens that
+                            Three Arrows Capital has invested in.</p>
+                        <a href="#" class="btn btn-primary">coming soon ...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'panel/img/theme/multicoin-dark.jpg' %}"
+                         alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Multicoin Capital</h4>
+                        <p class="card-text">Multicoin Capital is a thesis-driven investment firm that invests in
+                            cryptocurrencies, tokens, and blockchain companies reshaping trillion-dollar markets.</p>
+                        <a href="#" class="btn btn-primary">coming soon ...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'panel/img/theme/one-confirmation.jpg' %}"
+                         alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">1confirmation</h4>
+                        <p class="card-text">1confirmation is a venture fund that supports exceptional
+                            founders fueling the decentralization of the web and society.</p>
+                        <a href="#" class="btn btn-primary">coming soon ...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'panel/img/theme/jump-trading.png' %}"
+                         alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">Jump Trading</h4>
+                        <p class="card-text">Jump Trading is a proprietary trading firm with a
+                            focus on algorithmic and high-frequency trading strategies.</p>
+                        <a href="#" class="btn btn-primary">coming soon ...</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 {% endblock %}
