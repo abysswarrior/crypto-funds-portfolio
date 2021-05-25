@@ -1,9 +1,14 @@
 from django.shortcuts import render, HttpResponse
 from binance_lab_portfolio.views import BinanceLabAssetsInfo
 
-# Create your views here.
+
 def home(request):
-    """panels home page"""
+    """home page"""
+    return render(request, 'panel/index.html')
+
+
+def binance_portfolio(request):
+    """binance portfolio page"""
 
     portfolio_data = BinanceLabAssetsInfo.as_view()(request).render().data
 
