@@ -10,4 +10,4 @@ def home(request):
     context = {
         'portfolio':portfolio_data
     }
-    return render(request, 'panel/dashboard.html', context)
+    return render(request, 'panel/binance_portfolio.html', context)
