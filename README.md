@@ -1,3 +1,12 @@
+<p align="center">
+  <img src="panel/static/panel/img/brand/logo.png"><br/>
+  Follow the experts<br/>
+
+  <img src="https://img.shields.io/badge/license-GPL--3-blue?logo=gnu">
+  <img src="https://img.shields.io/badge/python-%3E=3.8-blue?logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/os-linux-blue?logo=linux&logoColor=white"><br/><br/>
+</p>
+
 # Crypto Funds Portfolio
 **Crypto Funds Portfolio** is a free and open-source project, created by the _Django framework_. It's a web application that gives you the portfolio of the most famous cryptocurrency hedge funds and venture capitals.
 You can access all data through UI or APIs.
