@@ -1,6 +1,5 @@
 <p align="center">
-  <img src="panel/static/panel/img/brand/logo.png"><br/>
-  Follow the experts<br/>
+  <img src="panel/static/panel/img/brand/big-logo.png"><br/>
 
   <img src="https://img.shields.io/badge/license-GPL--3-blue?logo=gnu">
   <img src="https://img.shields.io/badge/python-%3E=3.8-blue?logo=python&logoColor=white">
