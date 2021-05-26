@@ -3,7 +3,11 @@
 
   <img src="https://img.shields.io/badge/license-GPL--3-blue?logo=gnu">
   <img src="https://img.shields.io/badge/python-%3E=3.8-blue?logo=python&logoColor=white">
-  <img src="https://img.shields.io/badge/os-linux-blue?logo=linux&logoColor=white"><br/><br/>
+  <img src="https://img.shields.io/badge/os-linux-blue?logo=linux&logoColor=white">
+  <img src= "https://img.shields.io/badge/crawler-selenium-blue?logo=selenium&logoColor=white"><br/>
+  <img src= "https://img.shields.io/badge/document-swagger-green?logo=swagger&logoColor=white">
+  <img src="https://img.shields.io/badge/web-Django-green?logo=django&logoColor=white"><br/>
+  <img src= "https://img.shields.io/badge/deployment-heroku-purple?logo=heroku&logoColor=white"><br/>
 </p>
 
 # Crypto Funds Portfolio
