@@ -20,14 +20,14 @@ You can access all data through UI or APIs.
 
 You can see the deployed version of project [here](https://crypto-funds-portfolio.herokuapp.com/)
 
-### Requirements
+# Requirements
 
 ```markdown
 - python version 3.8 or upper
 - selenium + chrome & chromedriver
 ```
 
-### run locally
+# Run Locally
 
 First you need to install [google chrome](https://support.google.com/chrome/answer/95346?co=GENIE.Platform%3DDesktop&hl=en). 
 After that download [chromedrive](https://chromedriver.chromium.org/downloads) based on your chrome version and put it 
@@ -52,7 +52,7 @@ $ pip install -r requirements.txt
 $ python manage.py runserver
 ```
 
-### deploy on heroku
+# Deploy on Heroku
 
 The project completely compatible with **heroku** and everything is configured.
 Just fork the project to your github account and connect your heroku app to repository.
