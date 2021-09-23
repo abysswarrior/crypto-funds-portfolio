@@ -37,7 +37,7 @@ on chromedrive folder in project. now follow these steps :
 then run your proxy and set `RESTRICTED_AREA` to `True` and change `PROXY_HOST` and `PROXY_PORT` to your setting,
  otherwise set it to `False`.
 ```shell
-$ mv .env.sample .env
+$ mv .env.local.sample .env
 ```
 
 **Step 2 :** create a new virtualenv and install requirements.
