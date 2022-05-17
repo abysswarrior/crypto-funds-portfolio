@@ -4,5 +4,6 @@ from .views import *
 app_name = 'panel'
 urlpatterns = [
     path('', home, name='home'),
-    path('binance-portfolio/', binance_portfolio, name='binance')
+    path('binance-portfolio/', binance_portfolio, name='binance'),
+    path('pantera-portfolio/', pantera_portfolio, name='pantera'),
 ]

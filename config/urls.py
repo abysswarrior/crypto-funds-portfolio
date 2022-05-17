@@ -22,4 +22,5 @@ urlpatterns = [
     path('docs/', include('doc.urls')),
     path('', include('panel.urls')),
     path('api/v1/binance-lab/', include('binance_lab_portfolio.urls')),
+    path('api/v1/pantera-capital/', include('pantera_capital_portfolio.urls')),
 ]

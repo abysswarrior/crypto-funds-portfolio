@@ -1,0 +1,232 @@
+{% extends 'panel/base.html' %}
+{% load mathfilters %}
+
+{% block content %}
+    <!-- Header -->
+    <div class="header bg-primary pb-6">
+        <div class="container-fluid">
+            <div class="header-body">
+                <div class="row align-items-center py-4">
+                    <div class="col-lg-6 col-7">
+                        <h6 class="h2 text-white d-inline-block mb-0">‌Pantera</h6>
+                        <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                                <li class="breadcrumb-item"><a href="{% url 'panel:home' %}"><i class="fas fa-home"></i></a>
+                                </li>
+                                <li class="breadcrumb-item"><a href="{% url 'panel:home' %}">Portfolio</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Pantera Capital</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <!-- Card stats -->
+                <div class="row">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card card-stats">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title text-uppercase text-muted mb-0">Last 24h</h5>
+                                        {% if portfolio.last_24h_total_price_change_int == 0 %}
+                                            <span class="h2 font-weight-bold mb-0"> -- </span>
+                                        {% elif portfolio.last_24h_total_price_change_int < 0 %}
+                                            <span class="h2 font-weight-bold mb-0 text-red"><i
+                                                    class="fa fa-arrow-down"></i> {{ portfolio.last_24h_total_price_change_int|abs }} %</span>
+                                        {% else %}
+                                            <span class="h2 font-weight-bold mb-0 text-green"><i
+                                                    class="fa fa-arrow-up"></i> {{portfolio.last_24h_total_price_change_int}} %</span>
+                                        {% endif %}
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                                            <i class="ni ni-money-coins"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="mt-3 mb-0 text-sm">
+                                    <span class="text-nowrap">total price change</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card card-stats">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title text-uppercase text-muted mb-0">Last 7d</h5>
+                                        {% if portfolio.last_7d_total_price_change_int == 0 %}
+                                            <span class="h2 font-weight-bold mb-0"> -- </span>
+                                        {% elif portfolio.last_7d_total_price_change_int < 0 %}
+                                            <span class="h2 font-weight-bold mb-0 text-red"><i
+                                                    class="fa fa-arrow-down"></i> {{ portfolio.last_7d_total_price_change_int|abs }} %</span>
+                                        {% else %}
+                                            <span class="h2 font-weight-bold mb-0 text-green"><i
+                                                    class="fa fa-arrow-up"></i> {{ portfolio.last_7d_total_price_change_int }} %</span>
+                                        {% endif %}
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+                                            <i class="ni ni-money-coins"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="mt-3 mb-0 text-sm">
+                                    <span class="text-nowrap">total price change</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card card-stats">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title text-uppercase text-muted mb-0">Last 30d</h5>
+                                        {% if portfolio.last_30d_total_price_change_int == 0 %}
+                                            <span class="h2 font-weight-bold mb-0"> -- </span>
+                                        {% elif portfolio.last_30d_total_price_change_int < 0 %}
+                                            <span class="h2 font-weight-bold mb-0 text-red"><i
+                                                    class="fa fa-arrow-down"></i> {{ portfolio.last_30d_total_price_change_int|abs }} %</span>
+                                        {% else %}
+                                            <span class="h2 font-weight-bold mb-0 text-green"><i
+                                                    class="fa fa-arrow-up"></i> {{ portfolio.last_30d_total_price_change_int }} %</span>
+                                        {% endif %}
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-gradient-teal text-white rounded-circle shadow">
+                                            <i class="ni ni-money-coins"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="mt-3 mb-0 text-sm">
+                                    <span class="text-nowrap">total price change</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card card-stats">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <h5 class="card-title text-uppercase text-muted mb-0">Last 90D</h5>
+                                        {% if portfolio.last_90d_total_price_change_int == 0 %}
+                                            <span class="h2 font-weight-bold mb-0"> -- </span>
+                                        {% elif portfolio.last_90d_total_price_change_int < 0 %}
+                                            <span class="h2 font-weight-bold mb-0 text-red"><i
+                                                    class="fa fa-arrow-down"></i> {{ portfolio.last_90d_total_price_change_int|abs }} %</span>
+                                        {% else %}
+                                            <span class="h2 font-weight-bold mb-0 text-green"><i
+                                                    class="fa fa-arrow-up"></i> {{ portfolio.last_90d_total_price_change_int }} %</span>
+                                        {% endif %}
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="icon icon-shape bg-gradient-blue text-white rounded-circle shadow">
+                                            <i class="ni ni-money-coins"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="mt-3 mb-0 text-sm">
+                                    <span class="text-nowrap">total price change</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Tables -->
+    <div class="container-fluid mt--6">
+        <div class="row">
+            <div class="col">
+                <div class="card bg-default shadow">
+                    <!-- Table header -->
+                    <div class="card-header bg-transparent border-0">
+                        <h3 class="text-white mb-0">Pantera Capital Portfolio</h3>
+                    </div>
+                    <div class="table-responsive">
+                        <!-- Dark table -->
+                        <table class="table align-items-center table-dark table-flush">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Asset Name</th>
+                                <th scope="col">Symbol</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Marketcap</th>
+                                <th scope="col">last 24h volume</th>
+                                <th scope="col">last 24h price change</th>
+                                <th scope="col">last 7d price change</th>
+                                <th scope="col">last 30d price change</th>
+                                <th scope="col">last 90d price change</th>
+                                <th scope="col">last YTD price change</th>
+                                <th scope="col">sector</th>
+                                <th scope="col">liquid supply</th>
+                            </tr>
+                            </thead>
+                            <tbody class="list">
+                            {% for p in portfolio.assets %}
+                                <tr>
+                                <th scope="row" class="text-sm">
+                                    {{ p.asset_full_name }}
+                                </th>
+                                <td class="text-sm"> {{ p.asset_symbol }} </td>
+                                <td class="text-sm"> {{ p.price_str }} </td>
+                                <td class="text-sm"> {{ p.reported_marketcap_str }} </td>
+                                <td class="text-sm"> {{ p.last_24h_volume_str }} </td>
+                                {% if p.last_24h_price_change_int == 0 %}
+                                    <td class="text-sm"> -- </td>
+                                {% elif p.last_24h_price_change_int > 0 %}
+                                    <td class="text-green text-sm"> {{ p.last_24h_price_change_str }} </td>
+                                {% else %}
+                                    <td class="text-red text-sm"> {{ p.last_24h_price_change_str }} </td>
+                                {% endif %}
+
+                                {% if p.last_7d_price_change_int == 0 %}
+                                    <td class="text-sm"> -- </td>
+                                {% elif p.last_7d_price_change_int > 0 %}
+                                    <td class="text-green text-sm"> {{ p.last_7d_price_change_str }} </td>
+                                {% else %}
+                                    <td class="text-red text-sm"> {{ p.last_7d_price_change_str }} </td>
+                                {% endif %}
+
+                                {% if p.last_30d_price_change_int == 0 %}
+                                    <td class="text-sm"> -- </td>
+                                {% elif p.last_30d_price_change_int > 0 %}
+                                    <td class="text-green text-sm"> {{ p.last_30d_price_change_str }} </td>
+                                {% else %}
+                                    <td class="text-red text-sm"> {{ p.last_30d_price_change_str }} </td>
+                                {% endif %}
+
+                                {% if p.last_90d_price_change_int == 0 %}
+                                    <td class="text-sm"> -- </td>
+                                {% elif p.last_90d_price_change_int > 0 %}
+                                    <td class="text-green text-sm"> {{ p.last_90d_price_change_str }} </td>
+                                {% else %}
+                                    <td class="text-red text-sm"> {{ p.last_90d_price_change_str }} </td>
+                                {% endif %}
+
+                                {% if p.last_YTD_price_change_int == 0 %}
+                                    <td class="text-sm"> -- </td>
+                                {% elif p.last_YTD_price_change_int > 0 %}
+                                    <td class="text-green text-sm"> {{ p.last_YTD_price_change_str }} </td>
+                                {% else %}
+                                    <td class="text-red text-sm"> {{ p.last_YTD_price_change_str }} </td>
+                                {% endif %}
+                                <td class="text-sm"> {{ p.sector }} </td>
+                                <td class="text-sm"> {{ p.liquid_supply_str }} </td>
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
