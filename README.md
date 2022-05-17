@@ -47,6 +47,11 @@ $ source venv/bin/activate
 $ pip install -r requirements.txt
 ```
 
+**Notice :** if you get psycopg2 `pg_config` error use this command
+```shell
+$ sudo apt-get install libpq-dev
+```
+
 **Step 3 :** run django and reach whole project in [http://localhost:8000/](http://localhost:8000/).
 ```shell
 $ python manage.py runserver
