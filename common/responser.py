@@ -74,8 +74,8 @@ def create_portfolio_data_without_yearly_data(coin_info):
     data['last_30d_price_change_int'] = price_change_to_int(coin_info[9])
     data['last_90d_price_change_str'] = coin_info[10]
     data['last_90d_price_change_int'] = price_change_to_int(coin_info[10])
-    data['last_1Y_price_change_str'] = coin_info[11]
-    data['last_1Y_price_change_int'] = price_change_to_int(coin_info[11])
+    data['last_YTD_price_change_str'] = coin_info[11]
+    data['last_YTD_price_change_int'] = price_change_to_int(coin_info[11])
     data['sector'] = coin_info[12]
     data['liquid_supply_str'] = coin_info[13]
     data['liquid_supply_int'] = human_readable_number_to_int(coin_info[13])
