@@ -27,6 +27,7 @@ def crawl(url):
     # some option to work headless
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--headless")
+    chrome_options.add_argument('--disable-dev-shm-usage')
 
     # add windows size to crawl whole page
     # TODO: add scrolling feature to selenium
