@@ -45,7 +45,9 @@ def crawl(url):
     time.sleep(5)
 
     # crawl
-    assets = driver.find_elements_by_xpath('//*[@id="root"]/div[2]/div/div[2]/div[2]/div[2]/div[1]/div/div/div')
-    total = driver.find_elements_by_xpath('//*[@id="root"]/div[2]/div/div[2]/div[2]/div[3]')[0].text.split('\n')
+    # assets = driver.find_elements_by_xpath('//*[@id="root"]/div[2]/div/div[2]/div[2]/div[2]/div[1]/div/div/div') => old version of messari
+    assets = driver.find_elements_by_xpath('/html/body/div/div/div[2]/div/div[2]/div[2]/div[2]/div[1]/div/div')[0].text.split('\n')
+    # total = driver.find_elements_by_xpath('//*[@id="root"]/div[2]/div/div[2]/div[2]/div[3]')[0].text.split('\n') => old version of messari
+    total = driver.find_elements_by_xpath('/html/body/div/div/div[2]/div/div[2]/div[2]/div[3]/div')[0].text.split('\n')
 
     return assets, total, driver

@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from common.crawler import crawl
 from common.responser import *
 from common.messari_urls import portfolio_urls
+from common.chunker import chunks
 
 
 class BinanceLabAssetsInfo(APIView):
@@ -19,11 +20,10 @@ class BinanceLabAssetsInfo(APIView):
 
         # crawl binance labs
         assets, total, driver = crawl(portfolio_urls["binance_labs"])
+        assets = list(chunks(assets, 15))
 
         # loop over portfolio assets and format crawled data
-        for coin in assets:
-
-            coin_info = coin.text.split('\n')
+        for coin_info in assets:
 
             try:
                 data = create_portfolio_data_with_yearly_data(coin_info)
