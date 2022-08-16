@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from common.crawler import crawl
 from common.responser import *
 from common.messari_urls import portfolio_urls
+from common.chunker import chunks
 
 
 class PanteraCapitalAssetsInfo(APIView):
@@ -19,16 +20,22 @@ class PanteraCapitalAssetsInfo(APIView):
 
         # crawl pantera capital
         assets, total, driver = crawl(portfolio_urls["pantera_capital"])
+        # this 'T' string destroys the list structure
+        try:
+            assets.remove('T')
+        except:
+            print('not find tera')
+        assets = list(chunks(assets, 14))
 
         # loop over portfolio assets and format crawled data
-        for coin in assets:
+        for coin_info in assets:
 
-            coin_info = coin.text.split('\n')
+            # coin_info = coin.text.split('\n')
 
             try:
                 data = create_portfolio_data_without_yearly_data(coin_info)
             except Exception as e:
-                print("NOT ENOUGH DATA ------> BINANCE LABs - ", coin_info[3])
+                print("NOT ENOUGH DATA ------> PANTERA CAPITAL - ", coin_info[3])
                 continue
 
             portfolio_data.append(data)
