@@ -20,6 +20,11 @@ class BinanceLabAssetsInfo(APIView):
 
         # crawl binance labs
         assets, total, driver = crawl(portfolio_urls["binance_labs"])
+        # this 'T' string destroys the list structure
+        try:
+            assets.remove('T')
+        except:
+            print('not find tera')
         assets = list(chunks(assets, 15))
 
         # loop over portfolio assets and format crawled data
