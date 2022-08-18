@@ -76,4 +76,57 @@ paths:
       tags:
         - Funds Portfolio
       security: []
+  /pantera-capital/assets/:
+    post:
+      summary: Pantera Capital Portfolio
+      description: list of all coin listed in pantera capital
+      operationId: pantera-capital_portfolio
+      responses:
+        '200':
+          description: success
+          content:
+            '*/*':
+              example: |-
+                {
+                    "last_24h_total_price_change_str": "-3.09%",
+                    "last_24h_total_price_change_int": -3.09,
+                    "last_7d_total_price_change_str": "-2.46%",
+                    "last_7d_total_price_change_int": -2.46,
+                    "last_30d_total_price_change_str": "+6.49%",
+                    "last_30d_total_price_change_int": 6.49,
+                    "last_90d_total_price_change_str": "-14.04%",
+                    "last_90d_total_price_change_int": -14.04,
+                    "last_YTD_total_price_change_str": "-51.58%",
+                    "last_YTD_total_price_change_int": -51.58,
+                    "total_asset_count": 45,
+                    "assets": [
+                        {
+                            "id": "2",
+                            "asset_full_name": "ICON",
+                            "asset_symbol": "ICX",
+                            "price_str": "$0.325",
+                            "price_int": 0.325,
+                            "reported_marketcap_str": "--",
+                            "reported_marketcap_int": 0,
+                            "last_24h_volume_str": "$2.36M",
+                            "last_24h_volume_int": 2360000.0,
+                            "last_24h_price_change_str": "-6.77%",
+                            "last_24h_price_change_int": -6.77,
+                            "last_7d_price_change_str": "-7.84%",
+                            "last_7d_price_change_int": -7.84,
+                            "last_30d_price_change_str": "+3.56%",
+                            "last_30d_price_change_int": 3.56,
+                            "last_90d_price_change_str": "-8.19%",
+                            "last_90d_price_change_int": -8.19,
+                            "last_YTD_price_change_str": "-74.15%",
+                            "last_YTD_price_change_int": -74.15,
+                            "sector": "Smart Contract Platforms",
+                            "liquid_supply_str": "924M",
+                            "liquid_supply_int": 924000000.0
+                        }
+                    ]
+                }
+      tags:
+        - Funds Portfolio
+      security: [ ]
 security: []
