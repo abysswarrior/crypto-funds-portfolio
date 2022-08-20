@@ -23,6 +23,7 @@ class PanteraCapitalAssetsInfo(APIView):
         # this 'T' string destroys the list structure
         try:
             assets.remove('T')
+            assets.remove('O')
         except:
             print('not find tera')
         assets = list(chunks(assets, 14))
