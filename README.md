@@ -1,13 +1,13 @@
 <p align="center">
   <img src="icon.png"><br/>
 
-  <img src="https://img.shields.io/badge/license-GPL--3-blue?logo=gnu">
-  <img src="https://img.shields.io/badge/python-%3E=3.8-blue?logo=python&logoColor=white">
-  <img src="https://img.shields.io/badge/os-linux-blue?logo=linux&logoColor=white">
-  <img src= "https://img.shields.io/badge/crawler-selenium-blue?logo=selenium&logoColor=white"><br/>
-  <img src= "https://img.shields.io/badge/document-swagger-green?logo=swagger&logoColor=white">
-  <img src="https://img.shields.io/badge/web-Django-green?logo=django&logoColor=white"><br/>
-  <img src= "https://img.shields.io/badge/deployment-heroku-purple?logo=heroku&logoColor=white"><br/>
+  <img src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white">
+  <img src="https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray">
+  <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
+  <img src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
+  <img src="https://img.shields.io/badge/selenium-%2343B02A.svg?&style=for-the-badge&logo=selenium&logoColor=white">
+  <img src= "https://img.shields.io/badge/swagger-%2385EA2D.svg?&style=for-the-badge&logo=swagger&logoColor=black">
+  <img src= "https://img.shields.io/badge/heroku-%23430098.svg?&style=for-the-badge&logo=heroku&logoColor=white">
 </p>
 
 # Crypto Funds Portfolio
